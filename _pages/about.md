@@ -4,8 +4,8 @@ title: about
 permalink: /
 subtitle: >
   Studying Data Science to be a Data Analyst
-  <p>E-mail : min2max.dev@gmail.com</p>
-  <p>Seoul, South Korea</p>
+  <p>E-mail : min2max.dev@gmail.com
+  <br>Seoul, South Korea</p>
 
 profile:
   align: right
@@ -15,7 +15,7 @@ profile:
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
