@@ -11,15 +11,14 @@ related_publications: false
 ---
 # DJango
 ## 설치하기
-python3 -m pip install django
+- `python3 -m pip install django`
 
 ## Project 생성
 다음 코드를 통해 프로젝트를 생성
-- django-admin startproject pj_name
-pj_name 디렉토리를 생성하면서 프로젝트가 시작됨
+- `django-admin startproject pj_name` : pj_name 디렉토리를 생성하면서 프로젝트가 시작됨
 
 **현 위치에서 프로젝트를 생성하기 위해서는 .을 사용**
-django-admin startproject pj_name .
+- `django-admin startproject pj_name .`
 
 ### settings.py : 프로젝트 운영과 관련된 설정이 포함된 파일(중요)
 
@@ -28,8 +27,8 @@ django-admin startproject pj_name .
 ### manage.py : 프로젝트 진행에서 필요한 기능(utility)을 담당하는 파일
 
 ## 서버 시작
-- python3 manage.py runserver
-- python3 manage.py runserver port_num
+- `python3 manage.py runserver`
+- `python3 manage.py runserver port_num`
 **port_num에 원하는 수치를 입력함으로써 8000(default)가 아닌 포트에서 서버가 작동**
 포트 : 서버에서 여러 개의 서버 프로그램이 작동하고 있을 경우, 각각의 프로그램에 접속하기 위해서(listening) 사용하는 개념
 
@@ -42,11 +41,10 @@ django-admin startproject pj_name .
 - DB에서 불러온 정보를 사용해 함수는 결과값을 도출하고, 이를 html, xml, json과 같은 여러가지 형태로 사용자에게 제공
 
 ## App 생성
-- django-admin startapp app_name
-app_name이라는 디렉토리를 생성하면서 app이 생성
+- `django-admin startapp app_name` : app_name이라는 디렉토리를 생성하면서 app이 생성
 
 ## Routing(route : 경로)
-사용자가 접속한 각각의 경로를 누가 처리할 것인지를 결정하는 것
+- 사용자가 접속한 각각의 경로를 누가 처리할 것인지를 결정하는 것
 - django에서는 project 내의 urls.py에서 가장 큰 틀의 routing을 담당
 - project의 urls.py에서 위임한 app이 view안에 있는 특정 함수로 위임하여 작동
 
