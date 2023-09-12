@@ -44,7 +44,7 @@ related_publications: false
 - Container에 Web server와 File system 내부에 실행 시킬 파일이 존재
 - User가 사용하는 컴퓨터의 Web browser를 통해 접속을 시도
 - Web browser에서 정해진 path를 통해 특정 port에 접근
-- 유저의 컴퓨터와 서버의 컴퓨터가 따로 있을 경우, 해당 포트로 연결함으로써 해결
+- 유저의 컴퓨터와 서버의 컴퓨터가 따로 있을 경우, 해당 포트로 연결함으로써 해결<br>
 **Port Forwarding**
 ![port_forwarding](../assets/img/port_forwarding.jpg)
 - Docker 상의 Container 내부에 Web server가 존재할 경우, Container에 접속하기 이전에 Host 상에 있는 port를 거쳐야 함
