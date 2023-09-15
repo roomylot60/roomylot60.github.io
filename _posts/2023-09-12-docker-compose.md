@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker-Compose Basic
-date: 2023-09-12 18:30:00-0000
+date: 2023-09-12 18:30:00-0400
 description: How to make docker-compose
 tags: docker
 categories: grammer

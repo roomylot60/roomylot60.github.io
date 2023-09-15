@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker image making
-date: 2023-09-12 16:22:00-0000
+date: 2023-09-12 16:22:00-0400
 description: How to make image
 tags: docker
 categories: grammer

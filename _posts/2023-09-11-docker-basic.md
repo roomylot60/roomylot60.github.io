@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker Desktop Basic
-date: 2023-09-11 16:28:00-0000
+date: 2023-09-11 16:28:00-0400
 description: tutorial of docker
 tags: docker
 categories: grammer
