@@ -9,6 +9,7 @@ related_publications:
 ---
 
 진행 기간 : 22.9.20 ~ 22.10.7
+데이터 : [Kaggle : Body signal of smoking](https://www.kaggle.com/datasets/kukuroo3/body-signal-of-smoking)
 
 # 목차
 - [개발 환경](#개발-환경)
