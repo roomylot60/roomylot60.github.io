@@ -14,6 +14,13 @@ related_publications:
 # 목차
 - [개발 환경](#개발-환경)
 - [사용 기술](#사용-기술)
+    * [Frontend](#frontend)
+    * [Backend](#backend)
+    * [EDA](#eda)
+    * [Modeling](#modeling)
+    * [Visualizing](#visualizing)
+    * [기타](#기타)
+        + [Scaling](#scaling)
 
 ## 개발 환경
 - Visual Studio Code
@@ -24,11 +31,29 @@ related_publications:
 
 ## 사용 기술
 ### Frontend
+- Nodejs
+
 ### Backend
+- django
+
 ### EDA
 - python3
 - numpy
 - pandas
 - tensorflow
 - scikit-learn
+
 ### Modeling
+- N cluster
+
+### Visualizing
+- seaborn
+- matplotlib
+
+### 기타
+#### Scaling
+- Min Max Scaler
+- Robust Sacler
+- Standard Scaler
+- Log Scaler
+#### 첨도/왜도
