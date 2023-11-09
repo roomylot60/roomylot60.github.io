@@ -8,4 +8,4 @@ category: project
 related_publications: 
 ---
 
-진행 기간 : 22.8.12 ~ 22.8.
+진행 기간 : 22.8.12 ~ 22.8.25
