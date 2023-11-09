@@ -2,7 +2,7 @@
 layout: page
 title: Recommand System for MZ generation
 description: Recommand Residential Area with Customers' Need
-img: 
+img: assets/img/3rd_pj_homepage.png
 importance: 2
 category: project
 related_publications: 
