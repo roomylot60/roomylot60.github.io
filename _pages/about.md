@@ -19,9 +19,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I got a bachelor’s degree at Computer Engineering in UOS. After graduation, I learned Data Science in Multi-Campus to be a Data Analyst. I produced recommender systems and chatBOT with NLP.
+I got a bachelor’s degree at Computer Engineering in UOS. After graduation, I learned Data Science in Multi-Campus Education Center to be a Data Analyst. I produced recommend systems as a team project.
+After end up class, I'm studying Machine Learning and Deep Learning to make some NLP models and chatBOT.
 
-When I spend some time for myself, I usually go to gym for weight training nowadays. I desire to improve myself and keep learning something as long as I can as I believe eagerness to learn makes life energy.
+I've recently been going to the gym during my leisure time to do weight training. I started this routine cause of the importance of health in life, I found satisfaction in progressively increasing the weights. Weight training at the gym can offer numerous benefits to both physical and mental well-being. Consistent exercise not only strengthens the muscles and improves endurance but also has positive effects on stress relief and boosts self-confidence. The decision to increase the weight in my training regimen likely reflects the results of consistent effort, signifying an improvement in my physical capabilities. This sense of accomplishment contributes to a positive outlook on self-improvement.
+
+I desire to improve myself and keep learning something as long as I can because I believe eagerness to learn makes life more energetic.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
