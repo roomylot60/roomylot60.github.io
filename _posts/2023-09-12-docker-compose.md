@@ -78,7 +78,11 @@ services:
     - `restart: always` : 특정 요인으로 인해 Container가 실행 중 중단되었을 경우, 해당 Container를 자동으로 재시작 해줌
 <br>
 
-![Flowchart](../assets/img/flowchart.jpg)
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.html path="assets/img/flowchart.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
 
 ## Ref.
 [생활코딩:Docker-compose](https://bit.ly/docker-compose-sample)
