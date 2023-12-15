@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine Learning Basic
+title: ML in Netural Language Processing
 date: 2023-10-28 16:18:00-0400
 description: Basic Concept of ML for NLP
 tags: NLP
