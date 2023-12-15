@@ -2,7 +2,7 @@
 layout: post
 title: MySQL Basic
 date: 2023-09-12 16:22:00-0400
-description: tutorial of mysql
+description: Tutorial of mysql in docker
 tags: MySQL
 categories: grammer
 giscus_comments: true
