@@ -46,4 +46,5 @@ related_publications: false
 - `docker run -p 8888:8000 --name web-server web-server-build` : 'web-server'라는 'web-server-build' image 기반으로 생성된 Container의 8000번 포트와 host 8888번 포트를 연결
 - `docker run -p 8888:8000 --name web-server web-server-build pwd` : Overriding 하여 pwd가 먼저 실행하므로 앞의 명령은 실행되지 않음
 
-## Push : commit 혹은 build로 생성한 image를 Docker hub와 같은 Registry로 load 하는 것
+## Push
+- commit 혹은 build로 생성한 image를 Docker hub와 같은 Registry로 load 하는 것

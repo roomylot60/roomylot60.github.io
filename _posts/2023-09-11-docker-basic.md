@@ -46,7 +46,11 @@ related_publications: false
 - Web browser에서 정해진 path를 통해 특정 port에 접근
 - 유저의 컴퓨터와 서버의 컴퓨터가 따로 있을 경우, 해당 포트로 연결함으로써 해결<br>
 **Port Forwarding**
-![port_forwarding](../assets/img/port_forwarding.jpg)
+<div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/port_forwarding.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 - Docker 상의 Container 내부에 Web server가 존재할 경우, Container에 접속하기 이전에 Host 상에 있는 port를 거쳐야 함
 - 따라서 `docker run -p hst_p_num:ctn_p_num img_name` 해당 명령어를 통해 Host의 port와 Container의 port를 연결해 주어야 함(p : publish)
 
