@@ -10,14 +10,27 @@ related_posts: false
 related_publications: false
 ---
 ## 1. Transformer Model
-![Encoder-Decoder Structure](../Attatched/Pasted%20image%2020240105144425.png)
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240105144425.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
 - 2017년 Google에서 발표한 "Attention is all you need" 논문에서 제시한 모델
-- [Attention Machanism](Attention%20Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
+- **Attention Machanism** 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
 	- seq2seq : Encoder, Decoder에서 각각 하나의 RNN이 t 개의 시점을 가지는 구조
 	- transformer : Encoder, Decoder 단위(Layer)가 N 개로 구성되는 구조
 - RNN을 사용하지 않았음에도 성능적인 우수성
 	- Positional information : RNN은 단어의 위치에 따라 단어를 순차적(Sequential) 처리를 하여 단어의 위치 정보를 보유
-	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용![Positional Encoding](../Attatched/Pasted%20image%2020240104161019.png)![Embedding vector + PE](../Attatched/Pasted%20image%2020240104162143.png)
+	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104161019.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104162143.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 ```python
 import numpy as np
@@ -61,11 +74,13 @@ class PositionalEncoding(tf.keras.layers.Layer):
 
 ### seq2seq Model의 문제
 - Input sequence를 하나의 벡터(context vector)로 압축하는 과정에서 정보 손실 발생
+
 ### Hyper-parameter in Transformer
 1. d_{model} : Encoder, Decoder, Embedding vector에서의 차원
 2. num_layers : Layer(Encoder+Decoder)의 층 수
 3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
 4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
+
 ### Attention in TM
 1. Encoder Self-Attention
 2. Masked Decoder Self-Attention
@@ -77,15 +92,25 @@ class PositionalEncoding(tf.keras.layers.Layer):
 ### First sublayer : Multi-head Self-Attention
 #### Self-Attention
 - Attention : Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
+
 ```python
 Q = Query # t 시점의 decoder cell에서의 hidden state = t 시점의 encoder에서의 context vector
 K = Keys # 모든 시점의 encoder cell의 hidden states = dot product의 대상이 되는 set
 V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해지는 vector의 set
 ```
+
 - Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
 	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
-- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`![scaled dot-product attention with image](../Attatched/Pasted%20image%2020240104175031.png)![equation of SDA](../Attatched/Pasted%20image%2020240104175125.png)
-	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산
+- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`
+	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산<br>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104175031.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104175125.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 ```python
 def scaled_dot_product_attention(query, key, value, mask):
@@ -115,9 +140,22 @@ def scaled_dot_product_attention(query, key, value, mask):
   output = tf.matmul(attention_weights, value)
 
   return output, attention_weights
-
 ```
-- Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 ![가중치 행렬](../Attatched/Pasted%20image%2020240104180009.png)이 다르게 설정; 여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>![각 헤드에 따른 attention score](../Attatched/Pasted%20image%2020240104180133.png)
+
+- Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 가중치 행렬이 다르게 설정;<br> 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104180009.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/nlp/Pasted%20image%2020240104180133.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
 ```python
 # Multi-head Attention Implementation
 # 각 Q, K, V를 만들기 위한 가중치 행렬과 결합 후에 사용하는 가중치 행렬 생성
@@ -190,10 +228,13 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
     return outputs
 ```
+
 ### Second sublayer : FFNN
 - Residual connection(잔차 연결) : Sublayer의 입력과 출력을 합(같은 차원을 가지므로 가능)을 구하는 과정 [입력과 출력의 합과 모델의 학습 관련 논문](https://arxiv.org/pdf/1512.03385.pdf)
-- Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문]( https://arxiv.org/pdf/1607.06450.pdf)
+- Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문](https://arxiv.org/pdf/1607.06450.pdf)
+
 #### Encoder layer code
+
 ```python
 def encoder_layer(dff, d_model, num_heads, dropout, name="encoder_layer"):
   inputs = tf.keras.Input(shape=(None, d_model), name="inputs")
@@ -226,9 +267,8 @@ def encoder_layer(dff, d_model, num_heads, dropout, name="encoder_layer"):
       inputs=[inputs, padding_mask], outputs=outputs, name=name)
 ```
 
----
-
 ### Encoder Code
+
 ```python
 def encoder(vocab_size, num_layers, dff,
             d_model, num_heads, dropout,
@@ -262,11 +302,13 @@ def encoder(vocab_size, num_layers, dff,
 	1. **Encoders**' Self-Attention : Padding Mask
 	2. **Decoders**' Masked Self-Attention : Look-ahead Mask
 	3. **Decoders**' Encoder-Decoder Attention : Padding Mask
+
 #### Look-ahead Mask
 - Input : Embedding layer + Positional Encoding(with Teacher Forcing)
 - 번역할 문장을 문장 행렬로 입력 받을 때, RNN과는 달리 *한꺼번에* 입력되어 현재 시점의 단어를 예측하는 데에 미래 시점의 단어까지 참고
 - Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할
 - Masked Self-Attention : Self-Attention을 통해 Attention score를 얻고, Scaled dot-product Attention Function에 Look-ahead mask를 전달 후 Masking을 실시; 자기 자신과 이전 단어들 만을 참고할 수 있음
+
 ```python
 # 디코더의 첫번째 서브층(sublayer)에서 미래 토큰을 Mask하는 함수 
 def create_look_ahead_mask(x): 
@@ -275,11 +317,14 @@ def create_look_ahead_mask(x):
 	padding_mask = create_padding_mask(x) # 패딩 마스크도 포함
 	return tf.maximum(look_ahead_mask, padding_mask)
 ```
+
 ### Second sublayer : Encoder-Decoder Attention
 #### Q : Decoder, K = V : Encoder
 - Q, K, V의 출처가 같을 경우 Self-Attention이라고 함
 - Query는 Decoder의 1st sublayer로부터, Key, Value는 Encoder의 마지막 layer로부터 받음
+
 #### Decode layer code
+
 ```python
 def decoder_layer(dff, d_model, num_heads, dropout, name="decoder_layer"):
   inputs = tf.keras.Input(shape=(None, d_model), name="inputs")
@@ -329,8 +374,10 @@ def decoder_layer(dff, d_model, num_heads, dropout, name="decoder_layer"):
       outputs=outputs,
       name=name)
 ```
+
 ### Third sublayer : FFNN
 ### Decoder Code
+
 ```python
 def decoder(vocab_size, num_layers, dff,
             d_model, num_heads, dropout,
@@ -360,11 +407,15 @@ def decoder(vocab_size, num_layers, dff,
       outputs=outputs,
       name=name)
 ```
+
 ---
+
 ## 4. Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
+
 ## 5. Transformer Implementation
 ### Transformer Code
+
 ```python
 def transformer(vocab_size, num_layers, dff,
                 d_model, num_heads, dropout,
@@ -406,7 +457,9 @@ def transformer(vocab_size, num_layers, dff,
 
   return tf.keras.Model(inputs=[inputs, dec_inputs], outputs=outputs, name=name)
 ```
+
 ### Hyper-parameter Setting
+
 ```python
 small_transformer = transformer(
     vocab_size = 9000,
@@ -420,7 +473,9 @@ small_transformer = transformer(
 tf.keras.utils.plot_model(
     small_transformer, to_file='small_transformer.png', show_shapes=True)
 ```
+
 ### Loss Function
+
 ```python
 def loss_function(y_true, y_pred):
   y_true = tf.reshape(y_true, shape=(-1, MAX_LENGTH - 1))
@@ -433,11 +488,14 @@ def loss_function(y_true, y_pred):
 
   return tf.reduce_mean(loss)
 ```
+
 ### Learning rate
 #### Learning rate Scheduler
 - 미리 학습 일정을 정해두고 그 일정에 따라 학습률이 조정되는 방법
 - Transformer의 경우, 사용자가 정한 단계까지는 학습률을 증가시키고, 일정 단계에 이르면 학습률을 점차적으로 하강하여 적용
+
 #### Cumstom Scheduler Code
+
 ```python
 class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
 
@@ -454,5 +512,3 @@ class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
 
     return tf.math.rsqrt(self.d_model) * tf.math.minimum(arg1, arg2)
 ```
-## Ref. Chatbot Code
-[Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
