@@ -143,6 +143,7 @@ def encode(orig):
 1. Sentence Piece : 내부 단어 분리를 위한 패키지로, pretokenization 없이 전처리를 하지 않은 raw data에 바로 단어 분리 토크나이저를 사용할 수 있어 언어에 종속되지 않도록 BPE 알고리즘과 Unigram LM Tokenizer를 구현
 2. Subword Text Encoder : Tensorflow를 통해 사용할 수 있는 Subword Tokenizer로 Wordpiece Model을 채택
 3. Huggingface's Tokenizers : 자주 등장하는 서브워드들을 하나의 토큰으로 취급하는 다양한 Subword Tokenizer를 제공
+
     |Tokenizer|Descriptions|
     |-----|----------|
     |BertWordPieceTokenizer|허깅페이스에서 구현한 BERT 모델의 WordPiece Tokenizer로 tokenizers 패키지를 통해 제공|
