@@ -62,6 +62,9 @@ code {
   -ms-hyphens: none;
   hyphens: none;
   color: var(--code-color);
+  white-space: pre-wrap !important; /* 코드 줄바꿈 적용 */
+  word-wrap: break-word !important; /* 긴 단어도 줄바꿈 */
+  overflow-x: auto !important; /* 긴 코드가 있을 경우 가로 스크롤 */
 
   &.highlighter-rouge {
     font-size: v.$code-font-size;
@@ -91,6 +94,7 @@ code {
     color: inherit;
   }
 }
+
 
 td.rouge-code {
   @extend %code-snippet-padding;
