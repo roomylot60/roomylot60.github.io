@@ -1,0 +1,137 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Patrick's Dev. Blog</title>
+  <subtitle>이것 저것 해보는 중입니다</subtitle>
+  <updated>2025-03-16T17:30:50+09:00</updated>
+  <author>
+    <name>Patrick</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Patrick </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Graph</title>
+    <link href="http://localhost:4000/posts/Graph/" rel="alternate" type="text/html" title="Graph" />
+    <published>2025-03-14T14:34:00+09:00</published>
+  
+    <updated>2025-03-16T17:29:37+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Graph/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Graph/" />
+    <author>
+      <name>Patrick</name>
+    </author>
+
+  
+    
+    <category term="Algorithm" />
+    
+    <category term="CT" />
+    
+  
+
+  <summary>1. 그래프 표현 방법 1) 인접 리스트 (Adjacency List)    공간 복잡도: \( O(V+E) \)   구현 방식: dict + list   장점: 메모리 절약, 탐색 속도 빠름 (특히 희소 그래프에서 유리)   단점: 특정 간선 존재 여부 확인 시 \( O(V) \) 시간 필요   graph = {     &amp;#39;A&amp;#39;: [&amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;],     &amp;#39;B&amp;#39;: [&amp;#39;A&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;E&amp;#39;],     &amp;#39;C&amp;#39;: [&amp;#39;A&amp;#39;, &amp;#39;F&amp;#39;],     &amp;#39;D&amp;#39;: [&amp;#39;B&amp;#39;],     &amp;#39;E&amp;#39;: [&amp;#39;B&amp;#39;, &amp;#39;F&amp;#39;],     &amp;#39;F&amp;#39;: [&amp;#39;C&amp;#39;, &amp;#39;E&amp;#39;] }   2) 인접 행렬 (Adjacency Matrix)    공간 복잡도: \( O(V^2) \)   구현 방식: 2차원 리스트 사용   장점: 특정 간선 존재 여부를 ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Pip_requiremntes</title>
+    <link href="http://localhost:4000/posts/pip_requiremntes/" rel="alternate" type="text/html" title="Pip_requiremntes" />
+    <published>2024-10-06T13:18:00+09:00</published>
+  
+    <updated>2024-10-06T13:18:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/pip_requiremntes/</id>
+    <content type="text/html" src="http://localhost:4000/posts/pip_requiremntes/" />
+    <author>
+      <name>Patrick</name>
+    </author>
+
+  
+    
+  
+
+  <summary>pip  개발환경 관리     ‘requirements.txt’ 를 사용   pip freeze &amp;amp;gt; requirements.txt : 현재 개발환경에 적용된 패키지 다운로드 주소를 포함한 정보들을 저장   pip list --format=freeze &amp;amp;gt; requirements.txt : pip list를 사용하여 해당 패키지들의 버전 정보만을 저장   pip install -r requirements.txt : 해당 텍스트 파일에 저장된 패키지 버전 정보를 활용하여 pip에서 설치</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Bpe</title>
+    <link href="http://localhost:4000/posts/BPE/" rel="alternate" type="text/html" title="Bpe" />
+    <published>2024-08-08T13:18:00+09:00</published>
+  
+    <updated>2024-08-08T13:18:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/BPE/</id>
+    <content type="text/html" src="http://localhost:4000/posts/BPE/" />
+    <author>
+      <name>Patrick</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Byte Pair Encoding; BPE Ref.1 Paper.     문장 혹은 단어 안에 있는 글자들을 적절한 단위로 나누는 subword tokenizer 중 하나로, token의 빈도를 기반으로 높은 빈도의 token들을 merge하여 최종 token들을 만들어내는 방법   Character 단위에서 merge를 통해 vocabulary를 생성하는 Bottom up 방식을 사용   최초에 dictionary에 있는 훈련 데이터를 글자(character) 단위로 분해하여 vocabulary를 생성하고, 가장 많이 등장하는 unigram을 하나의 unigram으로 통합            Dictionary : 훈련 데이터를 단어 단위로 빈도수와 함께 저장       Vocabulary : 알고리...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Huggingface</title>
+    <link href="http://localhost:4000/posts/Huggingface/" rel="alternate" type="text/html" title="Huggingface" />
+    <published>2024-08-05T13:18:00+09:00</published>
+  
+    <updated>2024-08-05T13:18:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Huggingface/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Huggingface/" />
+    <author>
+      <name>Patrick</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Datasets(feat. Hugging Face)  0. Log-in # Create Repository hugginface-cli login  huggingface-cli repo create my-cool-dataset --type dataset  huggingface-cli repo create my-cool-dataset --type dataset --organization your-org-name    1. Download  load_dataset  from datasets import load_dataset  dataset = load_dataset(&amp;quot;dataset_name&amp;quot;, split=&amp;quot;train or test&amp;quot;, trust_remote_code=True or False)      lo...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Datasets</title>
+    <link href="http://localhost:4000/posts/Datasets/" rel="alternate" type="text/html" title="Datasets" />
+    <published>2024-08-04T13:18:00+09:00</published>
+  
+    <updated>2024-08-04T13:18:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Datasets/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Datasets/" />
+    <author>
+      <name>Patrick</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Datasets using for Pre-trained Speech model Ref.1 Ref.2    FLEURS; Few-shot Learning Evaluation of Universal Representations of Speech  FLEURS    N-way parallel speech datset in 102 languages built on top of the machine translation of FLoRes-101 benchmark, with approximately 12 hours of speech supervision per language        Using in ASR; Automatic Speech Recognition, SLID; Speech Language Iden...</summary>
+
+  </entry>
+
+</feed>
+
+
