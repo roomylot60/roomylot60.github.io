@@ -1,5 +1,5 @@
 ---
-title: 
+title: Numpy Version Error
 author: Patrick
 date: 2024-02-01 13:18:00 +0900
 tags: []
