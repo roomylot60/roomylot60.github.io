@@ -7,7 +7,8 @@ categories: [MySQL, Database]
 render_with_liquid: false
 ---
 ### MySQL 최초 설치 시  발생하는 에러 (Server version: 8.0.41-0ubuntu0.22.04.1 (Ubuntu))
-#### ERROR 1698 (28000)
+#### [ERROR 1698 (28000)](https://dev.mysql.com/doc/relnotes/workbench/en/news-6-1-7.html)
+- MySQL error code 1698 (ER_ACCESS_DENIED_NO_PASSWORD_ERROR) is now handled as an authentication error. (Bug #18711142, Bug #72536)
 
 ```bash
 $ mysql -u root -p
@@ -62,3 +63,50 @@ Query OK, 0 rows affected (0.02 sec)
 ```
 - 간혹 위 과정에서 `ERROR 1819 (HY000): Your password does not satisfy the current policy requirements` 와 같은 에러 발생
 - `mysql> SHOW VARIABLES LIKE 'validate_passwords';` 명령어를 통해 현재 적용중인 policy의 값을 확인하고 이를 변경
+
+### [Ref.](https://taltal-dev-note.tistory.com/370)
+#### Why is MySQL's Authentication Method Plugin auth_socket?
+- In recent versions of MySQL, particularly on Debian-based systems like Ubuntu, the default authentication method for the root user is often set to auth_socket for security reasons.
+- This is intended to improve security by requiring users to connect using the Unix socket file rather than a password.
+- This way, MySQL ensures that the user is authenticated through the operating system's user management.
+
+#### What are auth_socket and mysql_native_password?
+- `auth_socket`
+    - Mechanism: Uses Unix socket file for authentication.
+    - Usage: Authenticates the MySQL user based on the Unix system user running the MySQL client. This means the user must have a corresponding Unix user account.
+    - Pros: More secure because it eliminates the need for a password in certain cases.
+    - Cons: Less flexible for remote connections or scripts that require password authentication.
+
+- `mysql_native_password`
+    - Mechanism: Uses a password for authentication.
+    - Usage: Standard method for authenticating MySQL users, requiring a username and password.
+    - Pros: More versatile and works well for remote connections and scripts.
+    - Cons: Passwords can be a security risk if not managed properly.
+
+#### Other Authentication Methods
+- MySQL supports several other authentication plugins. Here are a few:
+- `caching_sha2_password`
+    - Mechanism: Uses SHA-256 hashing for passwords.
+    - Usage: Default authentication plugin from MySQL 8.0.
+    - Pros: Stronger security compared to mysql_native_password.
+    - Cons: May require additional configuration for older clients.
+- `sha256_password`
+    - Mechanism: Uses SHA-256 hashing for passwords.
+    - Usage: Provides strong security with some of the advanced features of caching_sha2_password.
+    - Pros: Strong encryption.
+    - Cons: Requires SSL/TLS for connections unless RSA is used for password exchange.
+- `pam`
+    - Mechanism: Pluggable Authentication Modules (PAM).
+    - Usage: Allows integration with various PAM-supported authentication methods, like LDAP, Kerberos, etc.
+    - Pros: Flexible and can integrate with existing authentication infrastructures.
+    - Cons: Complexity in configuration and dependency on the PAM configuration.
+- `dialog`
+    - Mechanism: Provides a mechanism for interactive client/server password authentication.
+    - Usage: Can be used to implement custom authentication dialogs.
+    - Pros: Flexibility in implementing custom authentication schemes.
+    - Cons: More complex to implement and manage.
+ 
+#### Summary
+- `auth_socket`: Authenticates via Unix socket file, tying MySQL user to the Unix user.
+- `mysql_native_password`: Standard username/password authentication.
+- Other methods like `caching_sha2_password`, `sha256_password`, `pam`, and `dialog` offer various levels of security and flexibility.
