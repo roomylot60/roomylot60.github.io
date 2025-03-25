@@ -1,8 +1,17 @@
+---
+title: MoeGoe TTS Code Review
+author: Patrick
+date: 2025-03-25 21:15:00 +0900
+tags: [BELU, ROUGE, Perplexity]
+categories: [NLP, Metric]
+render_with_liquid: false
+---
 ## MoeGoe Project
 ### 구성
 MoeGoe/
 utils.py
 transforms.py
+mel_processing.py
 
 ### utils.py
 - `HParams Class`: 하이퍼파라미터를 관리하며, 딕셔너리 형태의 데이터를 객체 속성으로 변환하여 모델의 설정을 체계적으로 관리
@@ -68,3 +77,48 @@ DEFAULT_MIN_DERIVATIVE = 1e-3
 - 적용 분야:
     - 정규화 흐름(Normalizing Flows): 복잡한 분포를 학습하고 샘플링하는 데 사용되며, 이미지 생성, 음성 합성 등 다양한 생성 모델에 적용​
     - 밀도 추정 및 변분 추론(Variational Inference): 데이터의 복잡한 분포를 정확하게 추정하여, 베이지안 추론 등에서 활용
+
+### mel_processing.py
+- PyTorch와 Librosa를 활용하여 오디오 신호를 처리하고 멜 스펙트로그램을 생성하는 함수들을 정의
+
+#### 1. 상수 및 전역 변수 정의
+- `MAX_WAV_VALUE = 32768.0`: 오디오 샘플의 최대 진폭 값을 정의(16비트 PCM 오디오의 최대값​)
+- 전역 딕셔너리 `mel_basis` 및 `hann_window`: 멜 필터 뱅크와 해닝 윈도우를 저장하여, 동일한 파라미터의 재계산을 방지하고 성능을 향상
+
+#### 2. 동적 범위 압축 및 복원 함수
+- 함수명: `dynamic_range_compression_torch(x, C=1, clip_val=1e-5)`
+- 기능: 입력 신호 x에 대해 동적 범위 압축(dynamic range compression)을 수행하여 신호의 진폭 범위를 줄여서 작은 신호를 증폭시키고 큰 신호를 억제하여 전체적인 신호의 균형을 조절
+- 구현: x의 값을 clip_val 이상으로 제한한 후, C 값을 곱한 값의 로그값
+- 참고: 동적 범위 압축은 오디오 신호 처리에서 흔히 사용되며, 소리의 일관된 볼륨을 유지
+
+- 함수명: `dynamic_range_decompression_torch(x, C=1)`:
+- 기능: 압축된 신호를 복원
+- 구현: 입력 x에 대해 지수 함수를 적용하고 C로 나눈 값​
+
+- 함수명: `spectral_normalize_torch`(magnitudes) 및 `spectral_de_normalize_torch`(magnitudes):
+- 기능: 위의 압축 및 복원 함수를 활용하여 구현하며 스펙트럼의 진폭을 정규화 및 복원
+
+#### 3. 스펙트로그램 생성 함수
+- 함수명: `spectrogram_torch(y, n_fft, sampling_rate, hop_size, win_size, center=False)`
+- 기능: 입력 신호 y에 대해 스펙트로그램을 계산
+- 구현:
+    - 해닝 윈도우 준비: win_size와 데이터 타입, 디바이스 정보를 기반으로 전역 딕셔너리 hann_window에서 윈도우를 가져오거나 새로 생성
+    - 패딩: 신호 y에 대해 n_fft와 hop_size를 기반으로 반사 패딩을 적용
+    - STFT 적용: 패딩된 신호에 대해 단시간 푸리에 변환(STFT)
+    - 진폭 스펙트럼 계산: STFT 결과의 실수부와 허수부를 사용하여 진폭 스펙트럼을 계산
+
+#### 4. 멜 스펙트로그램 변환 함수
+- 함수명: `spec_to_mel_torch(spec, n_fft, num_mels, sampling_rate, fmin, fmax)`
+- 기능: 스펙트로그램 spec을 멜 스펙트로그램으로 변환
+- 구현:
+    멜 필터 뱅크 준비: n_fft, num_mels, sampling_rate, fmin, fmax를 기반으로 전역 딕셔너리 mel_basis에서 멜 필터를 가져오거나 새로 생성
+    행렬 곱셈: 멜 필터와 스펙트로그램을 곱하여 멜 스펙트로그램을 생성
+    정규화: 생성된 멜 스펙트로그램에 대해 스펙트럼 정규화를 수행
+
+- 함수명: `mel_spectrogram_torch(y, n_fft, num_mels, sampling_rate, hop_size, win_size, fmin, fmax, center=False)`
+- 기능: 입력 신호 y에 대해 멜 스펙트로그램을 직접 계산
+- 구현:
+    - 신호 범위 확인: y의 최소값과 최대값이 -1과 1 사이에 있는지 확인
+    - 멜 필터 뱅크 및 해닝 윈도우 준비: 전역 딕셔너리에서 필요한 필터와 윈도우를 가져오거나 생성
+    - 패딩 및 STFT 적용: 신호에 패딩을 적용하고 STFT를 수행하여 스펙트로그램을 도출
+    - 멜 변환 및 정규화: 스펙트로그램을 멜 스펙트로그램으로 변환하고 정규화
