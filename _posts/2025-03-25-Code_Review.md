@@ -2,8 +2,8 @@
 title: MoeGoe TTS Code Review
 author: Patrick
 date: 2025-03-25 21:15:00 +0900
-tags: [BELU, ROUGE, Perplexity]
-categories: [NLP, Metric]
+tags: [PRQST, Librosa]
+categories: [Algorithm, Concept]
 render_with_liquid: false
 ---
 ## MoeGoe Project
@@ -18,6 +18,8 @@ mel_processing.py
 - `load_checkpoint` 함수: 저장된 체크포인트 파일에서 모델의 가중치와 학습 상태를 불러와 모델에 로드하고, 이를 통해 이전 학습 상태를 복원하거나, 사전 학습된 가중치를 활용하여 학습을 이어서 진행 가능
 - `get_hparams_from_file` 함수: JSON 형식의 설정 파일에서 하이퍼파라미터를 읽어와 HParams 객체로 변환해 모델의 설정을 파일로부터 쉽게 불러와 적용 가능
 - `load_audio_to_torch` 함수: 지정된 오디오 파일을 로드하고, 목표 샘플링 레이트로 변환한 후, PyTorch의 텐서로 변환하는데, 이는 오디오 데이터를 모델의 입력으로 사용하기 위한 전처리 과정
+
+---
 
 ### transforms.py
 - PyTorch를 활용하여 Rational Quadratic Spline 변환을 구현한 것입니다.
@@ -77,6 +79,8 @@ DEFAULT_MIN_DERIVATIVE = 1e-3
 - 적용 분야:
     - 정규화 흐름(Normalizing Flows): 복잡한 분포를 학습하고 샘플링하는 데 사용되며, 이미지 생성, 음성 합성 등 다양한 생성 모델에 적용​
     - 밀도 추정 및 변분 추론(Variational Inference): 데이터의 복잡한 분포를 정확하게 추정하여, 베이지안 추론 등에서 활용
+
+---
 
 ### mel_processing.py
 - PyTorch와 Librosa를 활용하여 오디오 신호를 처리하고 멜 스펙트로그램을 생성하는 함수들을 정의
