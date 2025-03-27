@@ -2,7 +2,7 @@
 title: MoeGoe TTS Code Review
 author: Patrick
 date: 2025-03-25 21:15:00 +0900
-tags: [PRQST, Librosa]
+tags: [PRQST, Librosa, VITS]
 categories: [Algorithm, Concept]
 render_with_liquid: false
 ---

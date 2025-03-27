@@ -2,7 +2,7 @@
 title: MoeGoe TTS Code Review
 author: Patrick
 date: 2025-03-26 20:50:00 +0900
-tags: []
+tags: [VITS]
 categories: [Algorithm, Concept]
 render_with_liquid: false
 ---
