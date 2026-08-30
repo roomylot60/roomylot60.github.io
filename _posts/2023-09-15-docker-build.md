@@ -2,7 +2,7 @@
 title: Docker image making
 author: Patrick
 date: 2023-09-15 16:22:00+0900
-tags: [Grammer]
+tags: [Grammar]
 categories: [Docker]
 render_with_liquid: false
 ---

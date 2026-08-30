@@ -1,9 +1,9 @@
 ---
-title: 
+title: Docker GPU Setup on Ubuntu
 author: Patrick
 date: 2024-03-11 13:18:00 +0900
-tags: []
-categories: []
+tags: [Troubleshooting]
+categories: [Docker]
 render_with_liquid: false
 ---
 ### Docker ubuntu 컨테이너에서 GPU 사용

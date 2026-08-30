@@ -2,11 +2,11 @@
 title: Web Application Server
 author: Patrick
 date: 2023-09-08 15:26:00 +0800
-tags: [Grammer]
-categories: [DJango]
+tags: [Grammar]
+categories: [Django]
 render_with_liquid: false
 ---
-# DJango
+# Django
 ## 설치하기
 - `python3 -m pip install django`
 

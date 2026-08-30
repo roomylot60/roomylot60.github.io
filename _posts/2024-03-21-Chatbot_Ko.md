@@ -1,9 +1,9 @@
 ---
-title: 
+title: Korean NLP Chatbot Data Preprocessing
 author: Patrick
 date: 2024-03-21 13:18:00 +0900
-tags: []
-categories: []
+tags: [Chatbot]
+categories: [NLP]
 render_with_liquid: false
 ---
 ## Korean NLP Chatbot

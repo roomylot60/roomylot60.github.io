@@ -1,9 +1,9 @@
 ---
-title: 
+title: PyTorch Custom Dataset
 author: Patrick
 date: 2024-03-02 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [PyTorch]
 render_with_liquid: false
 ---
 ## Custom Dataset

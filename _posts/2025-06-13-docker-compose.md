@@ -2,8 +2,8 @@
 title: docker-compose file
 author: patrick
 date: 2025-06-13 15:28:00 +0900
-categories: [docker]
-tags: [Grammer]
+categories: [Docker]
+tags: [Grammar]
 render_with_liquid: false
 ---
 

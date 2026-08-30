@@ -1,9 +1,9 @@
 ---
-title: 
+title: PyTorch Environment Setup
 author: Patrick
 date: 2024-02-19 13:18:00 +0900
-tags: []
-categories: []
+tags: [Grammar]
+categories: [PyTorch]
 render_with_liquid: false
 ---
 ## Pytorch

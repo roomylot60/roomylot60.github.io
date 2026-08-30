@@ -1,9 +1,9 @@
 ---
-title: 
+title: Unsupervised Training (Auto-Encoder)
 author: Patrick
 date: 2024-02-20 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [Deep Learning]
 render_with_liquid: false
 ---
 ## Unsupervised Training

@@ -2,7 +2,7 @@
 title: MySQL Basic
 author: Patrick
 date: 2023-09-12 16:22:00 +0900
-tags: [Grammer]
+tags: [Grammar]
 categories: [MySQL]
 render_with_liquid: false
 ---

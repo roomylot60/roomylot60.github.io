@@ -1,9 +1,9 @@
 ---
-title: 
+title: Gated Recurrent Convolution Neural Network (GRCNN)
 author: Patrick
 date: 2024-01-25 13:18:00 +0900
-tags: []
-categories: []
+tags: [Paper]
+categories: [Vision, OCR]
 render_with_liquid: false
 ---
 ## Gated Recurrent Convolution Neural Network

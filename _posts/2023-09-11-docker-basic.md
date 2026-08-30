@@ -2,7 +2,7 @@
 title: Docker Desktop Basic
 author: Patrick
 date: 2023-09-11 16:28:00 +0900
-tags: [Grammer]
+tags: [Grammar]
 categories: [Docker]
 render_with_liquid: false
 ---

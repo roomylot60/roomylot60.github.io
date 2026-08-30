@@ -3,7 +3,7 @@ title: Docker Swarm
 author: patrick
 date: 2026-02-20 15:33:00 +0900
 categories: [Docker]
-tags: [Grammer]
+tags: [Grammar]
 render_with_liquid: false
 ---
 # Docker Swarm Q&A 정리

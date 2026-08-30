@@ -1,9 +1,9 @@
 ---
-title: 
+title: Managing requirements.txt with pip
 author: Patrick
 date: 2024-10-06 13:18:00 +0900
-tags: []
-categories: []
+tags: [Tooling]
+categories: [Python]
 render_with_liquid: false
 ---
 ## pip

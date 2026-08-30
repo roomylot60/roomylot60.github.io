@@ -1,9 +1,9 @@
 ---
-title: 
+title: Data Augmentation
 author: Patrick
 date: 2024-01-24 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [Vision]
 render_with_liquid: false
 ---
 ## Data Augmentation(데이터 증강)

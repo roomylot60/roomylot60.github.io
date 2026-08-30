@@ -2,7 +2,7 @@
 title: Docker-Compose Basic
 author: Patrick
 date: 2023-09-12 18:30:00 +0900
-tags: [Grammer]
+tags: [Grammar]
 categories: [Docker]
 render_with_liquid: false
 ---

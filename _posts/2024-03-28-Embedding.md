@@ -1,9 +1,9 @@
 ---
-title: 
+title: Embedding
 author: Patrick
 date: 2024-03-28 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [NLP]
 render_with_liquid: false
 ---
 ## Embedding

@@ -1,9 +1,9 @@
 ---
-title: 
+title: "PyTorch DataLoader: Collate_fn"
 author: Patrick
 date: 2024-07-22 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [PyTorch]
 render_with_liquid: false
 ---
 Pytorch에서 데이터를 다룰 때 사용하는 모듈

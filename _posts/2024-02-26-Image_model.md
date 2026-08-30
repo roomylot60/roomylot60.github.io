@@ -1,9 +1,9 @@
 ---
-title: 
+title: Image Data Preprocessing
 author: Patrick
 date: 2024-02-26 13:18:00 +0900
-tags: []
-categories: []
+tags: [Concept]
+categories: [PyTorch]
 render_with_liquid: false
 ---
 ## Image data Preprocessing

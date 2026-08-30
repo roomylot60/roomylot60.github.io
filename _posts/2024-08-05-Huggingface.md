@@ -1,9 +1,9 @@
 ---
-title: 
+title: Hugging Face Dataset Repository
 author: Patrick
 date: 2024-08-05 13:18:00 +0900
-tags: []
-categories: []
+tags: [Tutorial]
+categories: [Huggingface]
 render_with_liquid: false
 ---
 # Datasets(feat. Hugging Face)
