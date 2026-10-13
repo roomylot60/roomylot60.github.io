@@ -174,8 +174,11 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
       start_line: 1
+  math_engine: mathjax
+  input: GFM
+  hard_wrap: true
 
 collections:
   tabs:
@@ -238,7 +241,3 @@ jekyll-archives:
     category: /categories/:name/
 
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  input: GFM
-  hard_wrap: true
