@@ -1,5 +1,5 @@
 ---
-title: MySQL Initial Setting for Password
+title: "MySQL root Login Error: auth_socket Authentication"
 author: Patrick
 date: 2024-09-17 17:33:00+0900
 tags: [Error]

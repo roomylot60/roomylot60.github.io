@@ -1,5 +1,5 @@
 ---
-title: MySQL Basic
+title: Django + MySQL Docker Environment Setup
 author: Patrick
 date: 2023-09-27 17:42:00+0900
 tags: [Grammar]

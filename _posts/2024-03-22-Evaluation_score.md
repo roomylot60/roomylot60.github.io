@@ -2,7 +2,7 @@
 title: Model evaluation metric
 author: Patrick
 date: 2024-03-22 13:18:00 +0900
-tags: [BELU, ROUGE, Perplexity]
+tags: [BLEU, ROUGE, Perplexity]
 categories: [NLP, Metric]
 description: BLEU, ROUGE, Perplexity부터 Accuracy·F1까지 주요 모델 평가 지표를 비교하고, 챗봇 목적별 추천 평가 지표 조합을 정리합니다.
 render_with_liquid: false

@@ -1,5 +1,5 @@
 ---
-title: MySQL Initial Setting for Password
+title: "MySQL Error: BLOB/TEXT Key Length in UNIQUE Constraint"
 author: Patrick
 date: 2024-09-18 16:25:00+0900
 tags: [Error]

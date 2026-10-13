@@ -1,9 +1,9 @@
 ---
-title: MoeGoe TTS Code Review
+title: "MoeGoe TTS Code Review: attentions & modules"
 author: Patrick
 date: 2025-03-26 20:50:00 +0900
-tags: [VITS]
-categories: [Algorithm, Concept]
+tags: [VITS, Attention]
+categories: [TTS, VITS]
 description: MoeGoe TTS 프로젝트의 attentions.py, modules.py를 분석해 Encoder·Decoder, Multi-Head Attention 구조와 WaveNet 스타일 컨볼루션 모듈을 정리합니다.
 render_with_liquid: false
 ---
