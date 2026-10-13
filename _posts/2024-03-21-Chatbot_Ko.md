@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-21 13:18:00 +0900
 tags: [Chatbot]
 categories: [NLP]
+description: 한국어 챗봇 데이터 전처리를 위한 정규 표현식 문법과 Okt를 활용한 형태소 토큰화 방법을 정리합니다.
 render_with_liquid: false
 ---
 ## Korean NLP Chatbot

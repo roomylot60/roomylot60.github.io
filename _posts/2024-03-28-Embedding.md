@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-28 13:18:00 +0900
 tags: [Concept]
 categories: [NLP]
+description: 텍스트·이미지·오디오 임베딩의 개념과 장단점을 정리하고, torch.nn.Embedding 설정과 Word2Vec·GloVe·BERT 등 워드 임베딩 기법을 소개합니다.
 render_with_liquid: false
 ---
 ## Embedding

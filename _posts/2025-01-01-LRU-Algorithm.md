@@ -4,6 +4,7 @@ author: Patrick
 date: 2025-01-01 17:20:00+0900
 tags: [LRU]
 categories: [Algorithm]
+description: LRU 캐시 교체 알고리즘의 동작 원리와 Deque+HashMap을 활용한 구현 방법, 장단점과 응용 분야를 정리합니다.
 render_with_liquid: false
 ---
 ## LRU (Least Recently Used) 알고리즘

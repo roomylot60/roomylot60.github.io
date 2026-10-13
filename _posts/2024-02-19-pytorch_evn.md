@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-02-19 13:18:00 +0900
 tags: [Grammar]
 categories: [PyTorch]
+description: PyTorch 설치 명령어와 CUDA 버전에 맞는 PyTorch 버전을 확인·설치하는 방법을 정리합니다.
 render_with_liquid: false
 ---
 ## Pytorch

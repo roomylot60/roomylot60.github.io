@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-06 13:18:00 +0900
 tags: [Troubleshooting]
 categories: [Docker]
+description: Docker 컨테이너 실행 시 발생한 CRLF 오류 원인과 해결법, 자주 쓰는 ENV 환경 변수 설정을 정리합니다.
 render_with_liquid: false
 ---
 

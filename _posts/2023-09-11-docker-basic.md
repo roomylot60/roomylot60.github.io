@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-11 16:28:00 +0900
 tags: [Grammar]
 categories: [Docker]
+description: Docker Hub·이미지·컨테이너 개념을 컴퓨터에 비유해 설명하고, 컨테이너 생성·관리 명령어와 포트 포워딩, 쉘 접속 방법을 정리합니다.
 render_with_liquid: false
 ---
 # Docker

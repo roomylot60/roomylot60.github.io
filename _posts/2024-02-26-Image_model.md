@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-02-26 13:18:00 +0900
 tags: [Concept]
 categories: [PyTorch]
+description: PyTorch transforms를 활용한 이미지 전처리 파이프라인과, VGG·AlexNet에서 특징을 추출하는 FeatureExtractor 구현을 정리합니다.
 render_with_liquid: false
 ---
 ## Image data Preprocessing

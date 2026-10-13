@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-01-04 15:47:00 +0900
 categories: [Algorithm, CT]
 tags: [Graph, DFS, BFS]
+description: 코딩 테스트에서 자주 쓰이는 DFS, BFS, 다익스트라, 벨만-포드, 플로이드-워셜 등 그래프 알고리즘을 Python 코드로 정리합니다.
 ---
 ## Coding Test Graph
 ### 1. 깊이 우선 탐색 (Depth-First Search, DFS)

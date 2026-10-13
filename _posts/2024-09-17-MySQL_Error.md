@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-09-17 17:33:00+0900
 tags: [Error]
 categories: [MySQL, Database]
+description: MySQL 최초 설치 후 root 로그인이 거부되는 auth_socket 인증 문제를 해결하고, mysql_native_password 등 주요 인증 플러그인을 비교합니다.
 render_with_liquid: false
 ---
 ### MySQL 최초 설치 시  발생하는 에러 (Server version: 8.0.41-0ubuntu0.22.04.1 (Ubuntu))

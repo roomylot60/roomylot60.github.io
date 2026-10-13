@@ -4,6 +4,7 @@ author: patrick
 date: 2026-02-20 15:33:00 +0900
 categories: [Docker]
 tags: [Grammar]
+description: Docker Swarm의 Manager·Worker·Service 개념부터 GPU 구성, 포트 관리, 테넌트 추가 시 서비스 중단 여부까지 Q&A 형식으로 정리합니다.
 render_with_liquid: false
 ---
 # Docker Swarm Q&A 정리

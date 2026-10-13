@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-12 16:22:00 +0900
 tags: [Grammar]
 categories: [MySQL]
+description: 관계형 데이터베이스와 SQL의 기본 개념을 정리하고, Docker로 MySQL을 설치·실행한 뒤 자주 쓰는 스키마·테이블 명령어를 소개합니다.
 render_with_liquid: false
 ---
 # MySQL

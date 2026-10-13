@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-22 13:18:00 +0900
 tags: [BELU, ROUGE, Perplexity]
 categories: [NLP, Metric]
+description: BLEU, ROUGE, Perplexity부터 Accuracy·F1까지 주요 모델 평가 지표를 비교하고, 챗봇 목적별 추천 평가 지표 조합을 정리합니다.
 render_with_liquid: false
 ---
 ## 모델 평가 지표 개요
@@ -69,16 +70,21 @@ render_with_liquid: false
 - 챗봇에서도 "상황 설명" 중심이라면 사용 가능
 
 ✅ 비교 요약
-지표	핵심 특징	사용 분야	설명
-BLEU	정밀도 기반 n-gram	번역, 챗봇	단어 순서 엄격
-ROUGE	재현율 기반 n-gram	요약, 대화	핵심 단어 중심
-Perplexity	언어 모델 예측 정확도	언어 생성	낮을수록 좋음
-METEOR	의미 기반 유사도	번역, 챗봇	어순·동의어까지 반영
-Accuracy	전체 정답률	분류	이진/다중 클래스
-F1 Score	P-R 균형	감정, QA	불균형 데이터 적합
+
+|지표|핵심 특징|사용 분야|설명|
+|---|---|---|---|
+|BLEU|정밀도 기반 n-gram|번역, 챗봇|단어 순서 엄격|
+|ROUGE|재현율 기반 n-gram|요약, 대화|핵심 단어 중심|
+|Perplexity|언어 모델 예측 정확도|언어 생성|낮을수록 좋음|
+|METEOR|의미 기반 유사도|번역, 챗봇|어순·동의어까지 반영|
+|Accuracy|전체 정답률|분류|이진/다중 클래스|
+|F1 Score|P-R 균형|감정, QA|불균형 데이터 적합|
+
 ✅ 챗봇에서 추천 조합
-목적	추천 지표
-일반 대화 챗봇	BLEU, ROUGE-L, Perplexity
-의도 맞춤 응답 챗봇	BLEU + METEOR
-QA / 정답형 챗봇	Accuracy, F1
-요약·설명 중심 챗봇	ROUGE-1, ROUGE-L
+
+|목적|추천 지표|
+|---|---|
+|일반 대화 챗봇|BLEU, ROUGE-L, Perplexity|
+|의도 맞춤 응답 챗봇|BLEU + METEOR|
+|QA / 정답형 챗봇|Accuracy, F1|
+|요약·설명 중심 챗봇|ROUGE-1, ROUGE-L|

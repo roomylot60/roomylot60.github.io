@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-09-18 16:25:00+0900
 tags: [Error]
 categories: [MySQL, Database]
+description: UNIQUE 키로 지정한 TEXT 컬럼에서 발생하는 'key length' 에러를 VARCHAR 변경으로 해결하는 방법을 정리합니다.
 render_with_liquid: false
 ---
 #### ERROR 1170 (42000)

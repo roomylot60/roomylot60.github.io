@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-01-24 13:18:00 +0900
 tags: [Concept]
 categories: [Vision]
+description: 회전, 이동, 반전, 밝기 조절 등 다양한 이미지 데이터 증강 기법과 그 목적을 정리합니다.
 render_with_liquid: false
 ---
 ## Data Augmentation(데이터 증강)

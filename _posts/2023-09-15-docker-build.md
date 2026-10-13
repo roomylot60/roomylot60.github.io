@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-15 16:22:00+0900
 tags: [Grammar]
 categories: [Docker]
+description: commit과 build 두 가지 방식으로 Docker 이미지를 만드는 과정을 Dockerfile 예제와 함께 정리합니다.
 render_with_liquid: false
 ---
 # Docker Image 만들기

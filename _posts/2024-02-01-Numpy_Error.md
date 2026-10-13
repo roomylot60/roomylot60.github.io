@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-02-01 13:18:00 +0900
 tags: [Error]
 categories: [Python]
+description: Numpy, matplotlib, json 로딩 과정에서 겪은 에러들의 원인과 해결법을 정리하고, BeautifulSoup에서 사용 가능한 HTML parser들을 비교합니다.
 render_with_liquid: false
 ---
 ## Error

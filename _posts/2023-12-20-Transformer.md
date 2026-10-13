@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-12-20 18:18:00 +0900
 tags: [Concept]
 categories: [NLP]
+description: Transformer의 전체 구조와 Positional Encoding, Multi-head Attention, 인코더·디코더 구현을 코드와 함께 상세히 정리합니다.
 render_with_liquid: false
 ---
 ## 1. Transformer Model

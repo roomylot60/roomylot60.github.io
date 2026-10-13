@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-11 13:18:00 +0900
 tags: [Troubleshooting]
 categories: [Docker]
+description: Ubuntu Docker 컨테이너에서 GPU 드라이버 설치, 볼륨 연결, Konlpy 구동을 위한 JVM·로케일 설정 과정을 정리합니다.
 render_with_liquid: false
 ---
 ### Docker ubuntu 컨테이너에서 GPU 사용

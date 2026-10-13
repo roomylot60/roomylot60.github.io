@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-12 18:30:00 +0900
 tags: [Grammar]
 categories: [Docker]
+description: Docker Compose의 개념과 docker-compose.yml 작성법을 WordPress + MySQL 예제로 정리합니다.
 render_with_liquid: false
 ---
 # Docker-compose

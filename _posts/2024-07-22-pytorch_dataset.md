@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-07-22 13:18:00 +0900
 tags: [Concept]
 categories: [PyTorch]
+description: 길이가 다른 데이터를 배치로 묶을 때 필요한 PyTorch DataLoader의 collate_fn 작성법을 정리합니다.
 render_with_liquid: false
 ---
 Pytorch에서 데이터를 다룰 때 사용하는 모듈

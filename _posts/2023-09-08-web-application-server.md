@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-08 15:26:00 +0800
 tags: [Grammar]
 categories: [Django]
+description: Django 설치부터 프로젝트/앱 생성, 서버 실행, URL 라우팅 구조까지 기본 사용법을 정리합니다.
 render_with_liquid: false
 ---
 # Django

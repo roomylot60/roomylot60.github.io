@@ -4,6 +4,7 @@ author: patrick
 date: 2025-06-13 15:28:00 +0900
 categories: [Docker]
 tags: [Grammar]
+description: docker-compose.yml에서 service, build, ports, volumes, GPU 디바이스 설정 등 주요 항목의 의미를 정리합니다.
 render_with_liquid: false
 ---
 

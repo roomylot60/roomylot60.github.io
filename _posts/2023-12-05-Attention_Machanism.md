@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-12-05 20:12:00 +0900
 tags: [Concept]
 categories: [NLP]
+description: Seq2seq의 정보 손실 문제를 해결하는 Attention 메커니즘의 개념과, Dot-Product·Bahdanau Attention의 계산 과정을 비교 정리합니다.
 render_with_liquid: false
 ---
 

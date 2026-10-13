@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-03-02 13:18:00 +0900
 tags: [Concept]
 categories: [PyTorch]
+description: PyTorch의 Dataset, DataLoader를 활용해 커스텀 데이터셋을 만드는 기본 구조(__init__, __len__, __getitem__)를 정리합니다.
 render_with_liquid: false
 ---
 ## Custom Dataset

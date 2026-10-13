@@ -4,6 +4,7 @@ author: Patrick
 date: 2025-03-25 21:15:00 +0900
 tags: [PRQST, Librosa, VITS]
 categories: [Algorithm, Concept]
+description: MoeGoe TTS 프로젝트의 utils.py, transforms.py, mel_processing.py 코드를 분석해 하이퍼파라미터 관리, Rational Quadratic Spline 변환, 멜 스펙트로그램 생성 로직을 정리합니다.
 render_with_liquid: false
 ---
 ## MoeGoe Project

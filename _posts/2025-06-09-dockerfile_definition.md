@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-06-09 10:23:00 +0900
 tags: [Grammar]
 categories: [Docker]
+description: Dockerfile의 기본 구성과 FROM 명령어, OS별 패키지 매니저 차이, 패키지 설치 과정을 정리합니다.
 render_with_liquid: false
 ---
 

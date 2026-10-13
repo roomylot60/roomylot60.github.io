@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-01-25 13:18:00 +0900
 tags: [Paper]
 categories: [Vision, OCR]
+description: RCNN에 게이트를 추가해 순환·순전파 정보를 제어하는 GRCNN 모델을 논문을 바탕으로 정리합니다.
 render_with_liquid: false
 ---
 ## Gated Recurrent Convolution Neural Network

@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-02-20 13:18:00 +0900
 tags: [Concept]
 categories: [Deep Learning]
+description: 정답 없이 데이터를 압축·복원하며 학습하는 Auto-Encoder의 원리와 Reconstruction Loss 개념을 정리합니다.
 render_with_liquid: false
 ---
 ## Unsupervised Training

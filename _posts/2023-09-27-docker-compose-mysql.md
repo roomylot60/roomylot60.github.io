@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-09-27 17:42:00+0900
 tags: [Grammar]
 categories: [Docker]
+description: docker-compose의 -f, -d 옵션 활용법과 Ubuntu 컨테이너에서 Django+MySQL 개발 환경을 구성하며 겪은 mysqlclient 설치 오류 해결 과정을 정리합니다.
 render_with_liquid: false
 ---
 ## Docker 명령어

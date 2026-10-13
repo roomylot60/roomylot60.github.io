@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-08-05 13:18:00 +0900
 tags: [Tutorial]
 categories: [Huggingface]
+description: Hugging Face CLI로 데이터셋 저장소를 생성하고, load_dataset()으로 데이터셋을 불러오는 기본 사용법을 정리합니다.
 render_with_liquid: false
 ---
 # Datasets(feat. Hugging Face)

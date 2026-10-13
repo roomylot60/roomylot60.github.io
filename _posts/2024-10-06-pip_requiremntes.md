@@ -4,6 +4,7 @@ author: Patrick
 date: 2024-10-06 13:18:00 +0900
 tags: [Tooling]
 categories: [Python]
+description: pip freeze, pip list로 requirements.txt를 생성하고 이를 통해 개발 환경을 재현하는 방법을 정리합니다.
 render_with_liquid: false
 ---
 ## pip

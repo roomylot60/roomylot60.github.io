@@ -4,6 +4,7 @@ author: Patrick
 date: 2023-11-28 19:50:00 +0900
 tags: [Concept]
 categories: [NLP]
+description: OOV 문제를 해결하는 Subword 토크나이저 개념과 BPE 알고리즘을 직접 구현하고, WordPiece 등 주요 Subword Tokenizer 패키지를 비교합니다.
 render_with_liquid: false
 ---
 ## Subword Tokenizer

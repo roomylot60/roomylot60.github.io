@@ -4,6 +4,7 @@ author: Patrick
 date: 2025-03-27 19:03:00 +0900
 tags: [VITS, FastSpeech, TTS]
 categories: [Comparison]
+description: 일반적인 한국어 TTS 모델과 MoeGoe(VITS 기반) 모델을 목적, 구조, 학습 데이터, 음질·속도·확장성 등 다양한 기준으로 비교합니다.
 render_with_liquid: false
 ---
 ## 일반적인 한국어 TTS 모델과 해당 모델 비교
