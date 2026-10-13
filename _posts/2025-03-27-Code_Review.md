@@ -17,13 +17,13 @@ render_with_liquid: false
 |실제 음색|일반인/뉴스 발화체|유명 성우, 버튜버 음색 기반|
 
 ### 🧠 2. 모델 구조 차이
-|항목|일반 TTS (ex. KoSpeech, FastSpeech2-KR)|MoeGoe (VITS 기반 확장)
+|항목|일반 TTS (ex. KoSpeech, FastSpeech2-KR)|MoeGoe (VITS 기반 확장)|
 |------|----------------------|------------------------|
-|모델 구조|Tacotron2, FastSpeech2, GlowTTS|VITS + fine-tuned VC 모듈
-|입력 단위|음절 / 자모 / 음소|자모 + 화자 임베딩
-|출력 방식|mel → vocoder → wav|end-to-end로 wav 직접 생성
-|화자 처리|Single speaker or speaker embedding|Multi-speaker & Voice Conversion
-|감정 지원|거의 없음 or 별도 처리|감정 임베딩(e.g. emotion_embedding) 가능
+|모델 구조|Tacotron2, FastSpeech2, GlowTTS|VITS + fine-tuned VC 모듈|
+|입력 단위|음절 / 자모 / 음소|자모 + 화자 임베딩|
+|출력 방식|mel → vocoder → wav|end-to-end로 wav 직접 생성|
+|화자 처리|Single speaker or speaker embedding|Multi-speaker & Voice Conversion|
+|감정 지원|거의 없음 or 별도 처리|감정 임베딩(e.g. emotion_embedding) 가능|
 
 ### 🧪 3. 학습 데이터 구성 차이
 |항목|일반 한국어 TTS|MoeGoe|
@@ -33,10 +33,10 @@ render_with_liquid: false
 |텍스트 정제|철저한 맞춤법 + 문장 종결|감정 표현이나 말투 그대로 반영|
 
 ### 🧩 4. 특징 비교 요약
-|비교 항목|	일반 TTS|	MoeGoe (VITS 기반)|
+|비교 항목|일반 TTS|MoeGoe (VITS 기반)|
 |------|----------------------|------------------------|
 |목적|표준형 합성음|캐릭터 감정/스타일 음성|
-|학습 방식|	Mel-spectrogram 기반 + vocoder|VAE + flow + GAN + VC|
+|학습 방식|Mel-spectrogram 기반 + vocoder|VAE + flow + GAN + VC|
 |텍스트 처리|표준어/문장 정제|감정/스타일 보존 우선|
 |화자 다양성|제한적 (1~3명)|자유롭고 scalable (다수 화자)|
 |특징|발음 정확도|음색/스타일 재현력|
@@ -57,7 +57,7 @@ render_with_liquid: false
 
 - 📌 VITS 구조가 진짜 사람 목소리에 더 가까운 waveform을 생성함.
 
-###🎯 2. 발음 정확도 / 텍스트 일치율
+### 🎯 2. 발음 정확도 / 텍스트 일치율
 
 |모델|정확도|특징|
 |------|----------------------|------------------------|

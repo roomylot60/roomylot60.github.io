@@ -31,12 +31,12 @@ FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
 - 기반으로 사용되는 os(e.g. ubuntu, debian, alpine)에 맞게 설치 방법 차이 발생
 - Package manager: `apt`, `apk`, `yum` 등
 
-|베이스 이미지|	OS	|패키지 매니저|
+|베이스 이미지|OS|패키지 매니저|
 |------------|------|------------|
-|ubuntu:22.04|Ubuntu|	apt|
-|debian:bullseye|	Debian|	apt|
-|alpine:3.18|	Alpine	|apk|
-|centos:7	|CentOS	|yum or dnf|
+|ubuntu:22.04|Ubuntu|apt|
+|debian:bullseye|Debian|apt|
+|alpine:3.18|Alpine|apk|
+|centos:7|CentOS|yum or dnf|
 
 ### 3. Package 설치
 ```bash
