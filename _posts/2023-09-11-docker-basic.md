@@ -8,11 +8,13 @@ render_with_liquid: false
 ---
 # Docker
 ## Docker hub : 프로그램을 다운로드 받는 App store와 같은 개념
+
 |index|Docker|Computer|
 |-|--|--|
 |1|docker hub|app store|
 |2|image|program|
 |3|container|process|
+
 - pull : Download `images` from `docker hub`
 - run : Excute `images` to make `container` 
 - [Docker hub](https://hub.docker.com/)
